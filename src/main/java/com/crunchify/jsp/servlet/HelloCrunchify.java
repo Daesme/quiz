@@ -27,7 +27,7 @@ public class HelloCrunchify extends HttpServlet {
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
         Obras_de_ArteDAO c=new Obras_de_ArteDAO();
         
-        Obra_de_Arte ob = new Obra_de_Arte(nombre, descripcion, estilo, 0,usuario);
+        Obra_de_Arte ob = new Obra_de_Arte(nombre, descripcion, estilo, valor,usuario);
         c.insert(ob);
         
         
