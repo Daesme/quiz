@@ -44,7 +44,7 @@ public class Obras_de_ArteDAO implements IBaseDatos<Obra_de_Arte> {
             } catch (URISyntaxException ex) {
                 Logger.getLogger(Obras_de_ArteDAO.class.getName()).log(Level.SEVERE, null, ex);
             }
-	    String query = " insert into Obra_de_Arte (Nombre,Descripcion,Estilo,Valor,user)"  + " values (?,?,?,?,?)";
+	    String query = " insert into Obra_de_Arte (User,Nombre,Descripcion,Estilo,Valor)"  + " values (?,?,?,?,?)";
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
