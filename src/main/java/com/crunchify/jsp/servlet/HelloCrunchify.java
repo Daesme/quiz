@@ -2,6 +2,7 @@ package com.crunchify.jsp.servlet;
  
 import edu.co.sergio.mundo.dao.Obras_de_ArteDAO;
 import edu.co.sergio.mundo.vo.Obra_de_Arte;
+import edu.co.sergio.mundo.vo.Usuario;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,6 +18,7 @@ import javax.servlet.RequestDispatcher;
 public class HelloCrunchify extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // reading the user input
+        String usuario = request.getParameter("User");
         String nombre = request.getParameter("nombre");
         String descripcion = request.getParameter("Descripcon");
         String estilo = request.getParameter("estilo");
@@ -25,7 +27,7 @@ public class HelloCrunchify extends HttpServlet {
         //Se debe incluir validaciones - Lo recuerda: Gestion de Excepciones.
         Obras_de_ArteDAO c=new Obras_de_ArteDAO();
         
-        Obra_de_Arte ob = new Obra_de_Arte(nombre, descripcion, estilo, 0);
+        Obra_de_Arte ob = new Obra_de_Arte(nombre, descripcion, estilo, 0,usuario);
         c.insert(ob);
         
         

@@ -19,6 +19,7 @@ body {
 <body>
     <div align="center" style="margin-top: 50px;">
         <form action="HelloCrunchify">
+           Usuario:  <input type="text" name="User" size="20px"> <br>
            Nombre:  <input type="text" name="nombre" size="20px"> <br>
            Descripcion:  <input type="text" name="Descripcon" size="20px"> <br>
            Estilo:  <input type="text" name="estilo" size="20px"> <br>
