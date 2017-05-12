@@ -30,6 +30,6 @@ body {
      </div>
  
     
-    <img src="ChartServlet" />
+    <img src="HelloCrunchify" />
 </body>
 </html>
