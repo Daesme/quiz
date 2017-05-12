@@ -48,11 +48,12 @@ public class Obras_de_ArteDAO implements IBaseDatos<Obra_de_Arte> {
         PreparedStatement preparedStmt=null;
 	    try {
 			preparedStmt = connection.prepareStatement(query);
-			preparedStmt.setString (1, t.getNombre());
-                        preparedStmt.setString (2, t.getDescripcion());
-                        preparedStmt.setString (3, t.getEstilo());
-			preparedStmt.setInt(4, t.getValor());
-                        preparedStmt.setString(5, t.getUser());
+			preparedStmt.setString(1, t.getUser());
+                        preparedStmt.setString (2, t.getNombre());
+                        preparedStmt.setString (3, t.getDescripcion());
+                        preparedStmt.setString (4, t.getEstilo());
+			preparedStmt.setInt(5, t.getValor());
+                        
                         result= preparedStmt.execute();
 	    } catch (SQLException e) {
 			e.printStackTrace();
